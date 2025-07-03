@@ -1,0 +1,52 @@
+/* components/Login.css */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.login-button {
+  background-color: #9c27b0;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #7b1fa2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
