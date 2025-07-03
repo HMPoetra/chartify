@@ -1,4 +1,4 @@
-# CodeIgniter 4 Application Starter
+# Dashboard Aplikasi Penjualan dengan Diagram Chart - CI4 & React
 
 ## What is CodeIgniter?
 
