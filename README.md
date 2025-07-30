@@ -1,68 +1,116 @@
-# Dashboard Aplikasi Penjualan dengan Diagram Chart - CI4 & React
 
-## What is CodeIgniter?
+# 📊 Chartify - Dashboard Penjualan & Analisis Data
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Chartify adalah aplikasi dashboard visualisasi data penjualan berbasis **React** untuk frontend dan **CodeIgniter 4** + **MongoDB** untuk backend.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## 🚀 Fitur Utama
+- Autentikasi user dengan role (Manager & Karyawan)
+- CRUD data Login, Barang, dan Transaksi
+- Visualisasi data penjualan: grafik penjualan, pendapatan, dan kategori
+- Responsive UI menggunakan React
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+---
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## 🛠️ Teknologi yang Digunakan
+- **Frontend**: React.js (Vite atau CRA), TailwindCSS (opsional)
+- **Backend**: CodeIgniter 4 (CI4)
+- **Database**: MongoDB (Atlas atau lokal)
+- **API**: RESTful API dengan CORS
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## 📦 Instalasi Project
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### 1. Clone Repository
+```bash
+git clone https://github.com/namakamu/chartify.git
+cd chartify
+```
 
-## Setup
+---
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+## ⚙️ Backend (CodeIgniter 4 + MongoDB)
 
-## Important Change with index.php
+### 2. Masuk ke folder `backend`
+```bash
+cd backend
+```
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### 3. Install Dependencies
+```bash
+composer install
+```
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### 4. Atur `.env` (duplikat dari `env`)
+```bash
+cp env .env
+```
+Edit file `.env`:
+```env
+CI_ENVIRONMENT = development
+app.baseURL = 'http://localhost:8080/'
 
-**Please** read the user guide for a better explanation of how CI4 works!
+database.default.hostname = localhost
+database.default.database = chartify
+database.default.username = 
+database.default.password = 
+database.default.DBDriver = MongoDB
+```
 
-## Repository Management
+### 5. Jalankan Server CodeIgniter
+```bash
+php spark serve
+```
+Akses API di: `http://localhost:8080`
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+---
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## 💻 Frontend (React.js)
 
-## Server Requirements
+### 6. Masuk ke folder `frontend`
+```bash
+cd ../frontend
+```
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+### 7. Install Dependencies
+```bash
+npm install
+```
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+### 8. Konfigurasi Endpoint Backend
+Edit file `.env`:
+```env
+VITE_API_URL=http://localhost:8080
+```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+### 9. Jalankan React App
+```bash
+npm run dev
+```
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Akses aplikasi di: `http://localhost:5173`
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+---
+
+## ✅ Selesai
+Kini kamu bisa mengakses **Chartify** dan mulai menggunakan fitur CRUD & dashboard analitik 🎉
+
+---
+
+## 📚 Struktur Folder
+```
+chartify/
+├── backend/        ← CodeIgniter 4 project
+├── frontend/       ← React.js project
+```
+
+---
+
+## 🧑‍💻 Kontributor
+- Xander Xeverra (@namakamu)
+- dll
+
+---
+
+## 📄 Lisensi
+MIT License
