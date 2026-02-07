@@ -1,0 +1,91 @@
+/* components/Login.css */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.login-button {
+  background-color: #9c27b0;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #7b1fa2;
+}
+<<<<<<< HEAD
+=======
+/* Login.css */
+
+.login-background {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #6a1b9a, #8e24aa, #7b1fa2, #ab47bc);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-paper {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+>>>>>>> aa1ffb3ad (Revisi DatePicker & Final Projek)
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

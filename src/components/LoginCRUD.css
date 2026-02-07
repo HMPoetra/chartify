@@ -1,0 +1,144 @@
+/* Container utama */
+.login-crud {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Judul halaman */
+.login-crud h2 {
+  color: #9C27B0; /* Ungu utama */
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Form styling */
+.login-crud form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+/* Input dan select */
+.login-crud input,
+.login-crud select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.login-crud input:focus,
+.login-crud select:focus {
+  border-color: #9C27B0;
+  outline: none;
+}
+
+/* Tombol Create/Update */
+.login-crud button[type="submit"] {
+  background-color: #9C27B0;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-crud button[type="submit"]:hover {
+  background-color: #7B1FA2;
+}
+
+/* Tabel user */
+.login-crud table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.login-crud table th,
+.login-crud table td {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.login-crud table th {
+  background-color: #f5f5f5;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Tombol aksi (Edit, Delete) */
+.login-crud table button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-crud table button:hover {
+  opacity: 0.9;
+}
+
+.login-crud table button:nth-child(1) {
+  background-color: #1976d2; /* Biru - Edit */
+  color: white;
+}
+
+.login-crud table button:nth-child(2) {
+  background-color: #e53935; /* Merah - Delete */
+  color: white;
+}
+
+/* Pesan error */
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #e57373;
+}
+
+/* Pesan deskripsi halaman user biasa */
+.login-crud p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.login-crud p strong {
+  color: #4A148C;
+}
+
+/* Tombol kembali */
+.login-crud button.back-button {
+  padding: 10px 18px;
+  background-color: #9C27B0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-crud button.back-button:hover {
+  background-color: #7B1FA2;
+}
